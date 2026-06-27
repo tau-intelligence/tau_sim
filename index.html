@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tau-Sim · LLM-assisted IDE for MuJoCo robotics simulation</title>
+  <meta name="description" content="Tau-Sim is an LLM-assisted IDE for MuJoCo robotic simulation. Build, simulate, and train robots with natural language. Download for Windows, macOS, and Linux." />
+  <meta name="keywords" content="mujoco, robotics, simulation, llm, reinforcement-learning, ide, tau-sim, tau intelligence" />
+  <link rel="canonical" href="https://tau-intelligence.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tau-Sim · LLM-assisted IDE for MuJoCo robotics" />
+  <meta property="og:description" content="Build, simulate, and train robots with natural language. Powered by MuJoCo and modern LLMs." />
+  <meta property="og:url" content="https://tau-intelligence.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Background grid + glow -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Tau-Sim home">
+        <span class="brand-mark">&tau;</span>
+        <span class="brand-text">Tau<span class="brand-dim">-Sim</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#download">Download</a>
+        <a href="#install">Install</a>
+      </nav>
+      <a class="btn btn-ghost nav-cta" href="#download">Get Tau-Sim</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>By Tau Intelligence · v0.2.0 · Apache-2.0</span>
+        <h1 class="hero-title">
+          The LLM-assisted IDE for
+          <span class="grad">MuJoCo robotics simulation</span>
+        </h1>
+        <p class="hero-sub">
+          Tau-Sim lets you describe robots, scenes, and behaviours in natural language and turns
+          them into runnable MuJoCo simulations. Prototype, debug, and train reinforcement-learning
+          policies, all from one focused workspace.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download" id="hero-download">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+            <span id="hero-download-label">Download for your platform</span>
+          </a>
+          <a class="btn btn-secondary" href="#install">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 4v10h16V8H4Zm2 2 3 3-3 3v-2.2L7.6 13 6 12.2V10Zm6 4h4v2h-4v-2Z"/></svg>
+            Install with pip
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Everything you need to go from idea to robot</h2>
+          <p>Tau-Sim wraps the physics, the AI, and the tooling into a single coherent IDE.</p>
+        </div>
+
+        <div class="grid features">
+          <article class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Natural-language authoring</h3>
+            <p>Describe a scene or task in plain English and let integrated LLMs generate MJCF models, controllers, and reward functions you can edit.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Real MuJoCo physics</h3>
+            <p>Built on MuJoCo 3.2+, so what you simulate is the real thing: accurate contacts, actuators, and dynamics with fast stepping.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>RL-ready <span class="badge-soon">Coming soon</span></h3>
+            <p>A planned training stack with Gymnasium, Stable-Baselines3, and PyTorch will let you wrap any scene as an environment and train policies right inside Tau-Sim.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔌</div>
+            <h3>Bring your own model</h3>
+            <p>First-class support for OpenAI and Google Gemini, plus Hugging Face assets, so you can swap providers without changing your workflow.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🚀</div>
+            <h3>FastAPI core</h3>
+            <p>A clean FastAPI backend powers the IDE, making it easy to script, automate, and integrate Tau-Sim into your own pipelines.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🖥️</div>
+            <h3>Cross-platform desktop app</h3>
+            <p>Native installers for Windows, macOS, and Linux. Or install the Python package directly with a single pip command.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section id="workflow" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>From prompt to policy in three steps</h2>
+          <p>A focused loop designed for fast robotics iteration.</p>
+        </div>
+        <div class="grid steps">
+          <article class="step">
+            <span class="step-num">01</span>
+            <h3>Describe</h3>
+            <p>Tell Tau-Sim what you want: a quadruped on rough terrain, a gripper stacking blocks, a custom arm.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">02</span>
+            <h3>Simulate</h3>
+            <p>Tau-Sim generates the MuJoCo model and scene, runs it live, and lets you tweak parameters in the IDE.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">03</span>
+            <h3>Train &amp; export <span class="badge-soon">Coming soon</span></h3>
+            <p>Define rewards, launch RL training, and export trained policies and models for deployment. On our roadmap.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Download Tau-Sim</h2>
+          <p>Pick your platform. Latest stable release, <strong>v0.2.0</strong>.</p>
+        </div>
+
+        <div class="grid downloads">
+          <article class="card download-card" data-os="windows">
+            <div class="dl-os">
+              <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10.5 4.5v7H3V5.5Zm0 8h7.5v7L3 19.5v-6Zm9-9.2L21 3v9h-9V4.3Zm0 9.2h9V21l-9-1.3v-6.2Z"/></svg>
+            </div>
+            <h3>Windows</h3>
+            <p class="dl-meta">Windows 10/11 · 64-bit · .exe installer</p>
+            <a class="btn btn-primary dl-btn" href="https://github.com/tau-intelligence/tau-sim/releases/latest/download/Tau-Sim-Setup-windows-x64.exe">
+              Download for Windows
+            </a>
+          </article>
+
+          <article class="card download-card" data-os="mac">
+            <div class="dl-os">
+              <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M16.37 12.78c-.02-2.07 1.69-3.06 1.77-3.11-.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.49.75-3.13.75-.65 0-1.65-.73-2.71-.71-1.39.02-2.68.81-3.4 2.06-1.45 2.52-.37 6.25 1.04 8.29.69 1 1.51 2.12 2.58 2.08 1.04-.04 1.43-.67 2.69-.67 1.25 0 1.61.67 2.71.65 1.12-.02 1.83-1.02 2.51-2.02.79-1.16 1.12-2.28 1.13-2.34-.02-.01-2.17-.83-2.2-3.29ZM14.3 6.46c.58-.7.97-1.67.86-2.65-.83.04-1.84.55-2.43 1.25-.53.62-.99 1.61-.87 2.56.93.07 1.87-.47 2.44-1.16Z"/></svg>
+            </div>
+            <h3>macOS</h3>
+            <p class="dl-meta">macOS 12+ · Apple Silicon &amp; Intel · .dmg</p>
+            <a class="btn btn-primary dl-btn" href="https://github.com/tau-intelligence/tau-sim/releases/latest/download/Tau-Sim-macos-universal.dmg">
+              Download for macOS
+            </a>
+          </article>
+
+          <article class="card download-card" data-os="linux">
+            <div class="dl-os">
+              <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M12 2c2.2 0 3.5 1.9 3.5 4.3 0 1.6-.4 2.4-.4 3.6 0 1 .8 1.7 1.6 3 .9 1.4 2 2.9 2 4.8 0 1.6-.9 2.6-2.2 2.6-.9 0-1.5-.4-2-.9-.4.6-1.2 1.2-2.5 1.2s-2.1-.6-2.5-1.2c-.5.5-1.1.9-2 .9-1.3 0-2.2-1-2.2-2.6 0-1.9 1.1-3.4 2-4.8.8-1.3 1.6-2 1.6-3 0-1.2-.4-2-.4-3.6C8.5 3.9 9.8 2 12 2Zm-1.4 5.2c-.4 0-.7.4-.7.9s.3.9.7.9.7-.4.7-.9-.3-.9-.7-.9Zm2.8 0c-.4 0-.7.4-.7.9s.3.9.7.9.7-.4.7-.9-.3-.9-.7-.9Z"/></svg>
+            </div>
+            <h3>Linux</h3>
+            <p class="dl-meta">AppImage · x86-64 · portable</p>
+            <a class="btn btn-primary dl-btn" href="https://github.com/tau-intelligence/tau-sim/releases/latest/download/Tau-Sim-linux-x86_64.AppImage">
+              Download for Linux
+            </a>
+          </article>
+        </div>
+
+        <p class="dl-note">
+          We detected you're on <strong id="detected-os">your platform</strong>. All installers are for the latest stable release, <strong>v0.2.0</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Install via pip -->
+    <section id="install" class="section section-alt">
+      <div class="container install-grid">
+        <div>
+          <div class="section-head section-head-left">
+            <h2>Prefer the command line?</h2>
+            <p>Tau-Sim ships as a Python package. Install it into any Python 3.10+ environment.</p>
+          </div>
+          <ul class="check-list">
+            <li>Works on Windows, macOS, and Linux</li>
+            <li>Built-in RL training with Gymnasium, SB3, and PyTorch <span class="badge-soon">Coming soon</span></li>
+            <li>Apache-2.0 licensed and open</li>
+          </ul>
+        </div>
+
+        <div class="code-block" role="group" aria-label="Install commands">
+          <div class="code-head">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-title">bash</span>
+          </div>
+          <pre><code><span class="c-comment"># Install the IDE</span>
+<span class="c-prompt">$</span> pip install tau-sim
+
+<span class="c-comment"># Launch the app</span>
+<span class="c-prompt">$</span> tau-sim</code></pre>
+          <button class="copy-btn" type="button" data-copy='pip install tau-sim'>Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container cta">
+        <h2>Build your next robot with Tau-Sim</h2>
+        <p>Download the desktop app or install the package, and start simulating in minutes.</p>
+        <div class="hero-actions center">
+          <a class="btn btn-primary" href="#download">Download now</a>
+          <a class="btn btn-secondary" href="https://pypi.org/project/tau-sim/">View on PyPI</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">&tau;</span>
+        <div>
+          <strong>Tau Intelligence</strong>
+          <span class="footer-tag">LLM-assisted robotics simulation</span>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#install">Install</a>
+        <a href="https://pypi.org/project/tau-sim/">PyPI</a>
+      </nav>
+      <p class="copyright">© <span id="year"></span> Tau Intelligence · Apache-2.0</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
